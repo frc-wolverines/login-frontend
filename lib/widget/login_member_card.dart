@@ -9,7 +9,14 @@ class LoginMemberCard extends StatelessWidget {
       width: 1200,
       height: 100,
       margin: const EdgeInsets.all(5),
-      color: const Color.fromARGB(26, 101, 101, 101),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(26, 101, 101, 101),
+        border: Border.all(
+          width: 0,
+          color: const Color.fromARGB(26, 101, 101, 101)
+        ),
+        borderRadius: BorderRadius.circular(12.5)
+      ),      
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

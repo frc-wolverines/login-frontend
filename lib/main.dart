@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/page/edit_member.dart';
 import 'package:login/widget/log_member_card.dart';
 import 'package:login/widget/login_member_card.dart';
 import 'package:login/widget/logout_member_card.dart';
@@ -16,19 +17,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark(),
       home: const Scaffold(
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              children: [
-                LogoutMemberCard(),
-                LoginMemberCard(),
-                RosterMemberCard(),
-                LogMemberCard()
-              ]
-            ),
-          ]
-        )
+        body: EditMember()
       )
     );
   }
