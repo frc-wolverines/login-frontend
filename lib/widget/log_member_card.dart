@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:login/main.dart';
 
 class LogMemberCard extends StatelessWidget {
-  const LogMemberCard({super.key});
+  LogMemberCard({super.key, required this.removed});
   
+  bool removed;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 1200,
       height: 100,
       margin: const EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(26, 101, 101, 101),
-        border: Border.all(
-          width: 0,
-          color: const Color.fromARGB(26, 101, 101, 101)
-        ),
-        borderRadius: BorderRadius.circular(12.5)
-      ),
+      decoration: MainApp.cardBoxDeco(removed),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

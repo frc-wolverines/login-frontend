@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:login/main.dart';
 
 class LoginMemberCard extends StatelessWidget {
-  const LoginMemberCard({super.key});
+  LoginMemberCard({super.key, required this.removed});
   
+  bool removed;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 1200,
       height: 100,
       margin: const EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(26, 101, 101, 101),
-        border: Border.all(
-          width: 0,
-          color: const Color.fromARGB(26, 101, 101, 101)
-        ),
-        borderRadius: BorderRadius.circular(12.5)
-      ),      
+      decoration: MainApp.cardBoxDeco(removed),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -31,12 +27,12 @@ class LoginMemberCard extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
-            child: const FloatingActionButton(
-              onPressed: null,
+            child: FloatingActionButton(
+              onPressed: removed == false ? MainApp.doNothing : null,
               // backgroundColor: Color.fromRGBO(154, 255, 171, 1),
-              backgroundColor: Color.fromRGBO(75, 255, 129, 1),
+              backgroundColor: removed == false ? const Color.fromRGBO(75, 255, 129, 1) : const Color.fromRGBO(255, 100, 100, 0.5),
               elevation: 0.0,
-              child: Icon(Icons.login, color: Colors.black, size: 27.5,),
+              child: Icon(removed == false ? Icons.login : Icons.not_interested, color: Colors.black, size: 27.5,),
             ),
           )
         ]
