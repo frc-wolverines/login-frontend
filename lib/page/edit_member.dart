@@ -13,7 +13,10 @@ class EditMember extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.white)
         ),
         actions: [
-          FloatingActionButton(onPressed: null)
+          FloatingActionButton.small(
+            onPressed: null,
+            child: Icon(Icons.save),
+          )
         ],
       ),
     );
