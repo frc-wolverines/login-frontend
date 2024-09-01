@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/main.dart';
 
 class LogoutMemberCard extends StatelessWidget {
   const LogoutMemberCard({super.key});
@@ -32,7 +33,7 @@ class LogoutMemberCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
             child: const FloatingActionButton(
-              onPressed: null,
+              onPressed: MainApp.doNothing,
               // backgroundColor: Color.fromRGBO(154, 255, 171, 1),
               backgroundColor: Color.fromRGBO(255, 87, 87, 1),
               elevation: 0.0,
