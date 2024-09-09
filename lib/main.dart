@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login/debug/components.dart';
+import 'package:login/shared/theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,8 +12,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(colorScheme: const ColorScheme.dark(primary: Colors.white)),
-      home: Column()
+      theme: AppTheme.themeData,
+      home: Scaffold(
+        appBar: DebugComponents.appBar,
+        body: Text("HEHE", style: AppTheme.bodyStyle),
+      )
     );
   }
 }
